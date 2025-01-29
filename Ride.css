@@ -154,8 +154,8 @@ body {
 }
 
 .first-frame .right-column img{
-    /*width: 15px; /*Sets the width and height for the QR image*/
-    /*height: 15px;*/
+    width: 15px; /*Sets the width and height for the QR image*/
+    height: 15px;*/
 }
 
 /* Download buttons styling in the right column of the first frame */
