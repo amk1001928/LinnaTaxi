@@ -222,7 +222,7 @@ body {
 .first-frame {
     display: grid; /* Uses CSS Grid to divide the first frame into columns */
     grid-template-columns: 1fr 1fr; /* Creates two columns */
-    height: 110vh; /* Sets the height of the first frame to 95% of the viewport height */
+    height: 100vh; /* Sets the height of the first frame to 95% of the viewport height */
     background-image: url('Images/RideBack1.png'); /* Background image for the first frame */
     background-size: cover; /* Ensures the background image covers the entire frame */
     background-position: center; /* Positions the background image in the center */
@@ -272,8 +272,8 @@ body {
 
 /* Styling for each download button image in the first frame */
 .first-frame .right-column .download-buttons img {
-    width: 200px; /* Sets the width & of the button images */
-    height: 60px;
+    width: 180px; /* Sets the width & of the button images */
+    height: 50px;
     margin-top: 10px;
     margin-right: 1rem; /* Adds space to the right of each image */
     cursor: pointer; /* Changes the cursor to a pointer when hovering over the image */
