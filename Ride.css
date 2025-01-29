@@ -7,6 +7,112 @@ body {
     color: #333;
 }
 
+.header {
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    z-index: 10;
+    position: fixed;
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-image: url('Images/HeaderBack.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.header-background {
+    background-image: url('Images/HeaderBack.png');
+    background-size: cover;
+    background-position: center;
+    filter: blur(100px);
+
+}
+
+.header .logo {
+    margin-left: 2rem;
+    position: absolute;
+    left: 5rem; 
+    top: 80%;
+    transform: translateY(-50%);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.logo img {
+    width: 130px;
+    height: auto;
+    box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.25),
+                0 4px 8px rgba(0, 0, 0, 0.25);
+    transition: transform 0.3s ease, filter 0.3s ease, opacity 0.3s ease;
+}
+
+.logo img:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
+    filter: grayscale(0%);
+    box-shadow: inset 0 6px 12px rgba(0, 0, 0, 0.3),
+                0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.nav {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    margin-left: 2rem;
+    gap: 1.5rem;
+    list-style: none;
+}
+.nav ul {
+    display: flex;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+}
+.nav ul li {
+    list-style: none;
+    display: inline-block;
+}
+/* Nav menu container */
+.header .nav ul {
+    display: flex;
+    list-style: none;
+    gap: 8rem;
+    margin: 0;
+    padding: 0;
+    margin-left: 23rem;
+}
+
+/* Menu button styling */
+.menu-button {
+    background-color: #FDD31A;
+    color: black;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2rem;
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    display: inline-block;
+    min-width: 60px;
+    text-align: center;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+/* Hover effect for menu buttons */
+.menu-button:hover {
+    background-color: #FFE46E;
+    transform: translateY(-3px);
+}
+    /* Ensure the nav and logo remain visible and aligned properly */
+.header .logo,
+.header .nav {
+    z-index: 1;
+}
+
 
 /* First Frame */
 .first-frame {
@@ -92,6 +198,8 @@ body {
     color: black; /* Sets the paragraph text color to black */
     width: 1000px;
     margin: 40px auto;
-    padding-left: 350px;   
-    padding-top: 40px;    
+    padding-left: 350px;
+   
+    padding-top: 40px;
+    
 }
