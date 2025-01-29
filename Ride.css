@@ -261,7 +261,7 @@ body {
 
 .first-frame .right-column img{
     width: 150px; /*Sets the width and height for the QR image*/
-    height: 150px;*/
+    height: 150px;
 }
 
 /* Download buttons styling in the right column of the first frame */
@@ -303,7 +303,5 @@ body {
     width: 1000px;
     margin: 40px auto;
     padding-left: 350px;
-   
-    padding-top: 40px;
-    
+    padding-top: 40px;    
 }
