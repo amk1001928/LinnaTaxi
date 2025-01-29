@@ -2,306 +2,158 @@ body {
     margin: 0;
     padding: 0;
     height: 100vh;
+    margin: 0;
     font-family: 'Roboto', sans-serif;
+    color: #333;
+    padding-top: 86px; /* Account for fixed header */
+}
+
+/* Navigation Styles */
+.navbar {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.navbar-nav .nav-link {
+    font-family: 'Jost', sans-serif;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+}
+
+/* details Section */
+.details {
+    min-height: 100vh;
+    background-image: url('Images/RideBack1.png');
+    background-size: contain;
+    background-position: center top;
+    background-repeat: no-repeat;
+    padding-top: 0.5rem;
+    position: relative;
+}
+
+.calling {
+    padding: 1rem;
+    border-radius: 10px;
+    
+}
+
+.calling h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
     color: #333;
 }
 
-.header {
-    height: 10vh;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-    z-index: 10;
-    position: fixed;
-    width: 100%;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    background-image: url('Images/HeaderBack.png');
-    background-size: cover;
-    background-position: center;
-}
-
-.header-background {
-    background-image: url('Images/HeaderBack.png');
-    background-size: cover;
-    background-position: center;
-    filter: blur(100px);
-
-}
-
-.header .logo {
-    margin-left: 2rem;
-    position: absolute;
-    left: 5rem; 
-    top: 80%;
-    transform: translateY(-50%);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
-}
-
-.logo img {
-    width: 130px;
-    height: auto;
-    box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.25),
-                0 4px 8px rgba(0, 0, 0, 0.25);
-    transition: transform 0.3s ease, filter 0.3s ease, opacity 0.3s ease;
-}
-
-.logo img:hover {
-    transform: scale(1.1);
-    opacity: 0.8;
-    filter: grayscale(0%);
-    box-shadow: inset 0 6px 12px rgba(0, 0, 0, 0.3),
-                0 6px 12px rgba(0, 0, 0, 0.3);
-}
-
-.nav {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    position: relative;
-    margin-left: 2rem;
-    gap: 1.5rem;
-    list-style: none;
-}
-.nav ul {
-    display: flex;
-    gap: 1.5rem;
-    margin: 0;
-    padding: 0;
-}
-.nav ul li {
-    list-style: none;
-    display: inline-block;
-}
-/* Nav menu container */
-.header .nav ul {
-    display: flex;
-    list-style: none;
-    gap: 8rem;
-    margin: 0;
-    padding: 0;
-    margin-left: 23rem;
-}
-
-/* Menu button styling */
-.menu-button {
-    background-color: #FDD31A;
-    color: black;
-    font-family: 'Roboto', sans-serif;
+.calling p, .calling ul {
     font-size: 1.2rem;
-    padding: 0.8rem 2rem;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.2);
-    text-decoration: none;
-    display: inline-block;
-    min-width: 60px;
-    text-align: center;
-    transition: transform 0.2s ease, background-color 0.3s ease;
+    line-height: 1.6;
 }
 
-/* Hover effect for menu buttons */
-.menu-button:hover {
-    background-color: #FFE46E;
-    transform: translateY(-3px);
-}
-    /* Ensure the nav and logo remain visible and aligned properly */
-.header .logo,
-.header .nav {
-    z-index: 1;
-}
-
-.header {
-    height: 10vh;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-    z-index: 10;
-    position: fixed;
-    width: 100%;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    background-image: url('Images/HeaderBack.png');
-    background-size: cover;
-    background-position: center;
-}
-
-.header-background {
-    background-image: url('Images/HeaderBack.png');
-    background-size: cover;
-    background-position: center;
-    filter: blur(100px);
-
-}
-
-.header .logo {
-    margin-left: 2rem;
-    position: absolute;
-    left: 5rem; 
-    top: 80%;
-    transform: translateY(-50%);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
-}
-
-.logo img {
-    width: 130px;
-    height: auto;
-    box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.25),
-                0 4px 8px rgba(0, 0, 0, 0.25);
-    transition: transform 0.3s ease, filter 0.3s ease, opacity 0.3s ease;
-}
-
-.logo img:hover {
-    transform: scale(1.1);
-    opacity: 0.8;
-    filter: grayscale(0%);
-    box-shadow: inset 0 6px 12px rgba(0, 0, 0, 0.3),
-                0 6px 12px rgba(0, 0, 0, 0.3);
-}
-
-.nav {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    position: relative;
-    margin-left: 2rem;
-    gap: 1.5rem;
-    list-style: none;
-}
-.nav ul {
-    display: flex;
-    gap: 1.5rem;
-    margin: 0;
-    padding: 0;
-}
-.nav ul li {
-    list-style: none;
-    display: inline-block;
-}
-/* Nav menu container */
-.header .nav ul {
-    display: flex;
-    list-style: none;
-    gap: 8rem;
-    margin: 0;
-    padding: 0;
-    margin-left: 23rem;
-}
-
-/* Menu button styling */
-.menu-button {
-    background-color: #FDD31A;
-    color: black;
-    font-family: 'Roboto', sans-serif;
-    font-size: 1.2rem;
-    padding: 0.8rem 2rem;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.2);
-    text-decoration: none;
-    display: inline-block;
-    min-width: 60px;
-    text-align: center;
-    transition: transform 0.2s ease, background-color 0.3s ease;
-}
-
-/* Hover effect for menu buttons */
-.menu-button:hover {
-    background-color: #FFE46E;
-    transform: translateY(-3px);
-}
-    /* Ensure the nav and logo remain visible and aligned properly */
-.header .logo,
-.header .nav {
-    z-index: 1;
-}
-
-/* First Frame */
-.first-frame {
-    display: grid; /* Uses CSS Grid to divide the first frame into columns */
-    grid-template-columns: 1fr 1fr; /* Creates two columns */
-    height: 100vh; /* Sets the height of the first frame to 95% of the viewport height */
-    background-image: url('Images/RideBack1.png'); /* Background image for the first frame */
-    background-size: cover; /* Ensures the background image covers the entire frame */
-    background-position: center; /* Positions the background image in the center */
-    color: black; /* Sets text color to white */
-    padding: 2rem; /* Adds padding around the content in the first frame */
-}
-
-/* Styling for the righr column in the first frame */
-.first-frame .right-column {
-    display: flex; /* Uses flexbox to align the content inside the right column */
-    flex-direction: column; /* Stacks content vertically */
-    justify-content: center; /* Vertically centers the content in the right column */
-    padding-top: 2.5rem;
-    padding-right: 2rem; /* Adds padding to the right of the right column */
-}
-
-/* Heading styling inside the right column of the first frame */
-.first-frame .right-column h1 {
-    font-size: 2.5rem; /* Sets a large font size for the heading */
-    margin-bottom: 0.5rem; /* Adds space below the heading */
-    color: black; /* Sets the heading text color to black */
-}
-
-/* Paragraph styling inside the right column of the first frame */
-.first-frame .right-column p {
-    font-size: 1.2rem; /* Sets a slightly larger font size for the paragraph */
-    line-height: 1.5; /* Sets the line height for better readability */
-    color: black; /* Sets the paragraph text color to black */
-}
-
-.first-frame .right-column ul {
-    font-size: 1.2rem; /* Sets a slightly larger font size for the paragraph */
-    line-height: 1.6; /* Sets the line height for better readability */
-    color: black; /* Sets the paragraph text color to black */
-}
-
-.first-frame .right-column img{
-    width: 150px; /*Sets the width and height for the QR image*/
+.qr-code {
+    width: 150px;
     height: 150px;
+    object-fit: contain;
 }
 
-/* Download buttons styling in the right column of the first frame */
-.first-frame .right-column .download-buttons {
-    display: flex;
-    justify-content: flex-end;
+.downloads img {
+    width: 160px;
+    height: 44px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Styling for each download button image in the first frame */
-.first-frame .right-column .download-buttons img {
-    width: 180px; /* Sets the width & of the button images */
-    height: 50px;
-    margin-top: 10px;
-    margin-right: 1rem; /* Adds space to the right of each image */
-    cursor: pointer; /* Changes the cursor to a pointer when hovering over the image */
-    border-radius: 15px; /* Sets the radius of the corners to 15px (adjust as needed) */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25); /* Adds a soft drop shadow */
+.downloads img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-.first-frame .right-column .download-buttons img:hover {
-    transform: scale(1.1); /* Slightly enlarges the image */
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Darker shadow on hover */
+/* Benefits Section */
+.benefits-section {
+    min-height: 100vh;
+    background-image: url('Images/RideBack2.png');
+    background-size: cover;
+    background-position: center;
+    padding: 1rem 0;
 }
 
-/* Second Frame */
-.second-frame {
-    height: 90vh; /* Sets the height of the second frame to 90% of the viewport height */
-    background-image: url('Images/RideBack2.png'); /* Background image for the second frame */
-    background-size: cover; /* Ensures the background image covers the entire frame */
-    background-position: center; /* Positions the background image in the center */
-    color: black; /* Sets text color to black */
-    padding-right: -5px; /* Adds padding around the content inside the second frame */
+.benefits-content {
+    font-family:'Jost';
+    font-size: 1.2rem;
+    margin-top: 120px;
+
+}
+.benefits-content p {
+    font-family:'Jost';
+    font-size: 1.3rem;
+
 }
 
-.second-frame .description{
-    font-size: 1.2rem; /* Sets a slightly larger font size for the paragraph */
-    line-height: 1.5; /* Sets the line height for better readability */
-    color: black; /* Sets the paragraph text color to black */
-    width: 1000px;
-    margin: 40px auto;
-    padding-left: 350px;
-    padding-top: 40px;    
+.benefits-list {
+    list-style-type: none;
+    padding-left: 0;
 }
+
+.benefits-list li {
+    font-family: 'Jost';
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.benefits-list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: black;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 991.98px) {
+    .details {
+        padding: 2rem 0;
+    }
+    
+    .calling {
+        margin: 2rem;
+    }
+    
+    .downloads {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        justify-content: center;
+    }
+    
+    .downloads img {
+        width: 160px;
+        height: 48px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .calling h1 {
+        font-size: 2rem;
+    }
+    
+    .calling p, .calling ul {
+        font-size: 1.1rem;
+    }
+    
+    .benefits-content {
+        margin: 1rem;
+    }
+    
+    .benefits-list li {
+        font-size: 1.1rem;
+        line-height: 1.6;
+    }
+
+@media (max-width: 575.98px) {
+    .downloads img {
+        width: 140px;
+        height: 42px;
+    }
+}
+}
+

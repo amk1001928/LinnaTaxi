@@ -1,175 +1,102 @@
-<<<<<<< Updated upstream
-/* General header styling */
+/* Header Styles */
 .header {
-    height: 10vh;
-    display: flex;
-    justify-content: space-between; /* Space between logo and nav */
-    align-items: center; /* Align items vertically */
-    padding: 1rem 2rem;
-    z-index: 10;
-    position: fixed;
-    width: 100%;
+    background-image: url('Images/HeaderBack.png');
+    background-size: cover;
+    background-position: center;
+    padding: 0rem;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    background-image: url('Images/HeaderBack.png');
-    background-size: cover; /* Ensure the image covers the entire header */
-    background-position: center; /* Center the image in the header */
+    height: 90px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
 }
 
-.header-background {
-    background-image: url('Images/HeaderBack.png');
-    background-size: cover; /* Ensure the image covers the entire header */
-    background-position: center; /* Center the image in the header */
-    filter: blur(100px);
-}
-
-/* Logo styling */
-.header .logo {
-    margin-left: 2rem; /* Add space to the left of the logo */
+/* Logo container styling */
+.logo {
     position: absolute;
-    left: 5rem; /* Adjust left position to your preference */
-    top: 30%; /* Move the logo closer to the top */
-    transform: translateY(-50%); /* Center the logo vertically */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+    z-index: 2;
+    top: 5px;
+    left: 100px;
 }
 
+/* Logo image styling */
 .logo img {
-    width: 150px;
-    height: auto;
-    box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.25), /* Inner shadow */
-                0 4px 8px rgba(0, 0, 0, 0.25);      /* Outer shadow */
-    transition: transform 0.3s ease, filter 0.3s ease, opacity 0.3s ease;
+    width: 120px;         
+    height: auto;         
+    box-shadow: 2px 6px 9px rgba(0, 0, 0, 0.25);
+    transition: transform 0.3s ease;
+    object-fit: contain;
 }
 
 .logo img:hover {
     transform: scale(1.1);
-    opacity: 0.8;
-    filter: grayscale(0%);
-    box-shadow: inset 0 6px 12px rgba(0, 0, 0, 0.3), /* Enhanced inner shadow */
-                0 6px 12px rgba(0, 0, 0, 0.3);       /* Enhanced outer shadow */
+}
+.navbar {
+    height: 100%;
 }
 
-.nav {
+.navbar-collapse {
     display: flex;
-    justify-content: flex-start;
+    justify-content: center !important;
     align-items: center;
-    position: relative;
-    margin-left: 2rem;
-    gap: 1.5rem;
-    list-style: none;
+    height: 100%;
+    padding-left: 200px;
 }
 
-.nav ul {
-    display: flex;
-    gap: 1.5rem;
-    margin: 0;
-    padding: 0;
-}
-
-.nav ul li {
-    list-style: none;
-    display: inline-block;
-}
-
-/* Nav menu container */
-.header .nav ul {
-    display: flex; /* Arrange items horizontally */
-    list-style: none; /* Remove bullet points */
-    gap: 8rem; /* Add equal spacing between menu items */
-    margin: 0; /* Reset margin */
-    padding: 0; /* Reset padding */
-    margin-left: 23rem;
-}
-
-/* Menu button styling */
-.menu-button {
-    background-color: #FDD31A; /* Set background color to yellow */
-    color: black; /* Set text color to black */
-    font-family: 'Roboto', sans-serif; /* Set font family */
-    font-size: 1.2rem; /* Set font size */
-    padding: 0.8rem 2rem; /* Add consistent padding for uniform size */
-    border: none; /* Remove border */
-    border-radius: 8px; /* Round the corners */
-    cursor: pointer; /* Pointer cursor on hover */
-    box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.2); /* Inner shadow effect */
-    text-decoration: none; /* Remove underline from button text */
-    display: inline-block; /* Ensure buttons maintain consistent block size */
-    min-width: 60px; /* Set a minimum width for uniformity */
-    text-align: center; /* Center-align the text within the button */
-    transition: transform 0.2s ease, background-color 0.3s ease; /* Smooth hover effect */
-}
-
-/* Hover effect for menu buttons */
-.menu-button:hover {
-    background-color: #FFE46E; /* Darken the yellow on hover */
-    transform: translateY(-3px); /* Slight lift on hover */
-}
-
-/* Ensure the nav and logo remain visible and aligned properly */
-.header .logo,
-.header .nav {
-    z-index: 1;
-=======
-/* General Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #f4f4f4;
-    color: #333;
-}
-
-/* Header Styling */
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #333;
-    color: #fff;
-    padding: 1rem 2rem;
+/* Ensure the hamburger button is on top */
+.custom-toggler {
     position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
+    top: 15px;
+    right: 15px;
+    z-index: 9999;
+    background-color: #FDD31A !important;
+    border: none;
+    padding: 8px;
+    border-radius: 6px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
 }
 
-.header .logo h1 {
-    font-size: 2rem;
-    font-weight: bold;
+/* Ensure button doesn't get outline when focused */
+.custom-toggler:focus {
+    outline: none;
+    box-shadow: none;
+}
+/* Make sure the hamburger icon appropriately sized */
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(0, 0, 0, 0.75)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+    width: 20px;
+    height: 20px; 
 }
 
-.nav ul {
-    list-style: none;
-    display: flex;
-    gap: 1.5rem;
+/* Navigation Styles */
+.navbar-nav {
+    gap: 2.3rem;
+}
+.nav-item {
+    margin: 2.5rem;
 }
 
-.nav ul li a {
-    color: #fff;
-    text-decoration: none;
+.menu-button {
+    background-color: #FDD31A;
+    font-family: 'Jost';
+    font-weight: 500;
+    color: black;
     font-size: 1.2rem;
-    transition: color 0.3s ease;
+    padding: 0.8rem 2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease, background-color 0.3s ease;
+    display: inline-block;
+    text-align: center;
+    width: 143px;
+    height: 45px;
 }
 
-.nav ul li a:hover {
-    color: #fdd31a;
-}
-
-/* Media Queries for Header */
-@media screen and (max-width: 768px) {
-    .header {
-        flex-direction: column;
-        text-align: center;
-        padding: 1rem;
-    }
-
-    .nav ul {
-        flex-direction: column;
-        gap: 0.5rem;
-    }
->>>>>>> Stashed changes
+.menu-button:hover {
+    background-color: #FFE46E;
+    transform: translateY(-3px);
+    color: black;
 }
